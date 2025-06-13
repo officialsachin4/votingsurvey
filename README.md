@@ -1,71 +1,90 @@
-🗳️ Voting Survey Application – Backend
-This is the backend of a Voting Survey System built with Spring Boot. It provides RESTful APIs for user registration, voting, election management, and administrative controls.
+# 🗳️ Voting Survey Application – Backend
 
-✅ Features
-🔐 User & Admin Authentication
-Voter and admin login with secure access handling.
+This is the backend of a Voting Survey System built with **Spring Boot**.  
+It provides RESTful APIs for user registration, voting, election management, and administrative controls.
 
-🗃️ Party & Constituency Management
-CRUD operations for political parties and electoral constituencies.
+---
 
-🗳️ Vote Casting & Status Tracking
-Allows vote casting, vote count updates, and voter participation tracking.
+## ✅ Features
 
-📊 Result Viewing by Constituency
-View real-time party-wise vote counts filtered by constituency.
+- 🔐 **User & Admin Authentication**  
+  Voter and admin login with secure access handling.
 
-🛠 Tech Stack
-Spring Boot
+- 🗃️ **Party & Constituency Management**  
+  CRUD operations for political parties and electoral constituencies.
 
-Spring Data JPA
+- 🗳️ **Vote Casting & Status Tracking**  
+  Allows vote casting, vote count updates, and voter participation tracking.
 
-ModelMapper
+- 📊 **Result Viewing by Constituency**  
+  View real-time party-wise vote counts filtered by constituency.
 
-MySQL / H2 Database
+---
 
-RESTful Web Services
+## 🛠 Tech Stack
 
-📂 Project Structure
-graphql
-Copy
-Edit
+- Spring Boot  
+- Spring Data JPA  
+- ModelMapper  
+- MySQL / H2 Database  
+- RESTful Web Services  
+
+---
+
+## 📂 Project Structure
+
+```
+
 com.hrdepartment
 ├── controller       # API controllers for users, parties, votes, etc.
 ├── service          # Business logic
 ├── entity           # JPA entities
 ├── payload          # DTOs
 └── repository       # JPA repositories
-🚀 Running the Application
-Clone the repository
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/voting-survey-backend.git
-cd voting-survey-backend
-Configure database in src/main/resources/application.properties.
+````
 
-Build and run the app
+---
 
-bash
-Copy
-Edit
-mvn spring-boot:run
-Access the API
+## 🚀 Running the Application
 
-bash
-Copy
-Edit
-http://localhost:8080/api/
-🔗 Key Endpoints (Examples)
-Endpoint	Description
-POST /api/user/register	Register new voter
-POST /api/user/login	Voter login
-POST /api/admin/login	Admin login
-POST /api/party	Add new political party
-PUT /api/user/voterId/{id}/vote	Cast vote
-GET /api/party/constituency/{id}	Get results by constituency
-PUT /api/party/{id}/reset-votes	Reset party votes
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/voting-survey-backend.git
+   cd voting-survey-backend
+````
 
-🙌 Contributions
+2. **Configure the database**
+   Edit `src/main/resources/application.properties` with your DB settings.
+
+3. **Build and run the app**
+
+   ```bash
+   mvn spring-boot:run
+   ```
+
+4. **Access the API**
+
+   ```
+   http://localhost:8080/api/
+   ```
+
+---
+
+## 🔗 Key Endpoints (Examples)
+
+| Endpoint                           | Description                 |
+| ---------------------------------- | --------------------------- |
+| `POST /api/user/register`          | Register new voter          |
+| `POST /api/user/login`             | Voter login                 |
+| `POST /api/admin/login`            | Admin login                 |
+| `POST /api/party`                  | Add new political party     |
+| `PUT /api/user/voterId/{id}/vote`  | Cast vote                   |
+| `GET /api/party/constituency/{id}` | Get results by constituency |
+| `PUT /api/party/{id}/reset-votes`  | Reset party votes           |
+
+---
+
+## 🙌 Contributions
+
 Feel free to fork the project, submit pull requests, or open issues for suggestions and bugs.
